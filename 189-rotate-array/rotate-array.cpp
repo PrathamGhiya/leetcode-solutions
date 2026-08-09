@@ -1,5 +1,6 @@
 class Solution {
 public:
+
     // It will be more efficient because it's Time-Complexity is  'O(n)'
 
     void swapping(vector<int> &nums, int i, int j){
@@ -10,7 +11,9 @@ public:
         }
     }
     void rotate(vector<int>& nums, int k) {
-        k %= nums.size();        // If 'k' is greater than 'n' then it will find the less no. of rotations, which will be equal array, when it is rotated 'k' times
+
+        k %= nums.size();           // If 'k' is greater than 'n' then it will find the less no. of rotations, which will be equal array, when it is rotated 'k' times
+
         int n = nums.size()-1;
         swapping(nums,0,n);
         swapping(nums,0,k-1);
@@ -18,7 +21,7 @@ public:
 
         for(int ele : nums) cout<<ele<<" ";
     }
-
+    
 
     //OR
 
